@@ -1,0 +1,15 @@
+function play(player){
+  const animals = ["Lion","Tiger","Wolf"];
+  const comp = animals[Math.floor(Math.random()*animals.length)];
+  let msg = "You chose " + player + ". Computer chose " + comp + ". ";
+
+  if(player === comp) msg += "It's a tie!";
+  else if(
+    (player==="Lion" && comp==="Wolf") ||
+    (player==="Tiger" && comp==="Lion") ||
+    (player==="Wolf" && comp==="Tiger")
+  ) msg += "You win!";
+  else msg += "You lose!";
+
+  document.getElementById("result").innerText = msg;
+}
