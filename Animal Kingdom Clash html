@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Animal Kingdom Clash</title>
+<style>
+  body{font-family:Arial;text-align:center;background:#eef;}
+  .card{display:inline-block;border:2px solid #333;padding:20px;margin:10px;border-radius:10px;background:#fff;cursor:pointer;}
+  #result{font-size:20px;margin-top:15px;}
+</style>
+</head>
+<body>
+
+<h1>Animal Kingdom Clash</h1>
+<p>Click an animal to battle!</p>
+
+<div class="card" onclick="play('Lion')">🦁 Lion</div>
+<div class="card" onclick="play('Tiger')">🐯 Tiger</div>
+<div class="card" onclick="play('Wolf')">🐺 Wolf</div>
+
+<p id="result"></p>
+
+<script>
+function play(player){
+  const animals=["Lion","Tiger","Wolf"];
+  const comp=animals[Math.floor(Math.random()*3)];
+  let msg = "You chose " + player + ". Computer chose " + comp + ". ";
+  if(player===comp) msg+="It's a tie!";
+  else if(
+    (player==="Lion"&&comp==="Wolf")||
+    (player==="Tiger"&&comp==="Lion")||
+    (player==="Wolf"&&comp==="Tiger")
+  ) msg+="You win!";
+  else msg+="You lose!";
+  document.getElementById("result").innerText=msg;
+}
+</script>
+
+</body>
+</html>
