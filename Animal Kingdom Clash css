@@ -1,0 +1,33 @@
+body{
+  font-family: Arial;
+  text-align: center;
+  background: linear-gradient(#cce0ff,#e6f2ff);
+}
+
+h1{
+  color:#003366;
+}
+
+.card{
+  display:inline-block;
+  border:2px solid #003366;
+  padding:18px 28px;
+  margin:10px;
+  border-radius:12px;
+  background:#ffffff;
+  cursor:pointer;
+  transition:0.3s;
+  font-size:18px;
+}
+
+.card:hover{
+  background:#cde2ff;
+  transform:scale(1.05);
+}
+
+#result{
+  margin-top:15px;
+  font-size:20px;
+  font-weight:bold;
+  color:#003366;
+}
